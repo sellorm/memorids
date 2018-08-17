@@ -2,6 +2,8 @@
 
 The goal of memorids is to provide a simple way to get good quality, memorable IDs.
 
+[![Travis-CI Build Status](https://travis-ci.org/sellorm/c4game.svg?branch=master)](https://travis-ci.org/sellorm/memorids) [![Codecov](https://img.shields.io/codecov/c/github/sellorm/c4game.svg)](https://codecov.io/gh/sellorm/memorids/)
+
 For one reason or another I've implemented various versions of this over the years and wanted to make a simple, reusable package to do the work for me instead.
 
 The IDs created are two words in English -- an adjective followed by a noun -- and are built from a random sample of a list of each.
