@@ -2,7 +2,7 @@
 
 The goal of memorids is to provide a simple way to get good quality, memorable IDs.
 
-[![Travis-CI Build Status](https://travis-ci.org/sellorm/c4game.svg?branch=master)](https://travis-ci.org/sellorm/memorids) [![Codecov](https://img.shields.io/codecov/c/github/sellorm/c4game.svg)](https://codecov.io/gh/sellorm/memorids/)
+[![Travis-CI Build Status](https://travis-ci.org/sellorm/memorids.svg?branch=master)](https://travis-ci.org/sellorm/memorids) [![Codecov](https://img.shields.io/codecov/c/github/sellorm/memorids.svg)](https://codecov.io/gh/sellorm/memorids/)
 
 For one reason or another I've implemented various versions of this over the years and wanted to make a simple, reusable package to do the work for me instead.
 
