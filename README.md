@@ -8,7 +8,7 @@ For one reason or another I've implemented various versions of this over the yea
 
 The IDs created are two words in English -- an adjective followed by a noun -- and are built from a random sample of a list of each.
 
-memorids has enough adjectives and nouns to create a little over half a million unique combinations of ID.
+memorids has enough adjectives and nouns to create over half a million unique combinations of ID.
 
 ## Installation
 
