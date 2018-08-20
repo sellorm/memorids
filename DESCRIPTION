@@ -3,12 +3,12 @@ Type: Package
 Title: Provides A Memorable ID
 Version: 0.1.0
 Authors@R: person("Mark", "Sellors", email = "github@5vcc.com", role = c("aut", "cre"))
-Description: A very simple tool to provide memorable ID strings for use in other projects.
+Description: A simple tool to provide memorable ID strings for use in other projects.
 License: MIT + file LICENSE
+URL: https://memorids.sellorm.com
 BugReports: https://github.com/sellorm/memorids/issues
 Encoding: UTF-8
 LazyData: true
 Suggests: 
     testthat
-RoxygenNote: 6.0.1
-
+RoxygenNote: 6.1.0
