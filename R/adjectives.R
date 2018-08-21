@@ -299,6 +299,7 @@ adjectives <- c(
   "quizzical",
   "radiant",
   "ragged",
+  "rambling",
   "rambunctious",
   "real",
   "recursing",
