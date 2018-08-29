@@ -150,7 +150,6 @@ nouns <- c(
   "bread",
   "break",
   "breakfast",
-  "breast",
   "breath",
   "brick",
   "bridge",
