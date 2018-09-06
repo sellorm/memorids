@@ -1024,7 +1024,7 @@ nouns <- c(
   "recommendation",
   "record",
   "recording",
-  "recover",
+  "recovery",
   "red",
   "reference",
   "reflection",
