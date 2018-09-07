@@ -1,0 +1,18 @@
+#!/usr/bin/env Rscript
+
+library(docopt)
+
+# docopt config
+"Prints a memorable ID
+
+Usage: memorid [-h -s <SEPARATOR>]
+
+Options:
+ -h --help       show this help
+ -s <SEPARATOR>  specify separator [default: -]" -> doc
+
+# parse docopts
+opts <- docopt(doc)
+
+# print the output
+cat(memorids::memorid(sep = opts$s), "\n")
