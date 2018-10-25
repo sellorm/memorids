@@ -127,7 +127,6 @@ beaver
 bed
 bedroom
 bee
-bee-eater
 beer
 beetle
 beginning
@@ -1056,7 +1055,6 @@ opossum
 opportunity
 opposite
 option
-orang-utan
 orange
 orangutan
 order
