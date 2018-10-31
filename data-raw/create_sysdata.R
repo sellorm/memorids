@@ -9,4 +9,4 @@ if(FALSE %in% file.exists(infiles)){
 invisible(lapply(infiles, function(x){load(x, envir = .GlobalEnv)}))
 
 rm(infiles)
-save(list = ls(), file = "../R/sysdata.Rda")
+save(list = ls(), file = "../R/sysdata.rda")
