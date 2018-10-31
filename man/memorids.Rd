@@ -27,3 +27,15 @@ The simple strings are two English words, output in the format
   \code{memorid()} which returns memorable ID.
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://memorids.sellorm.com}
+  \item Report bugs at \url{https://github.com/sellorm/memorids/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Mark Sellors \email{github@5vcc.com}
+
+}
