@@ -681,6 +681,7 @@ grasshopper
 great
 green
 greyhound
+grill
 groceries
 ground
 group
@@ -1006,7 +1007,6 @@ name
 nasty
 nation
 national
-natural
 nature
 neanderthal
 neat
@@ -1016,7 +1016,6 @@ negotiation
 nerve
 net
 network
-newfoundland
 news
 newspaper
 newt
@@ -1775,7 +1774,6 @@ writing
 yak
 yard
 year
-yellow
 yesterday
 zebra
 zebu

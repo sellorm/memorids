@@ -12,7 +12,7 @@ if (!file.exists(args[1])){
 obj_name <- gsub(x = args[1], pattern = ".[a-z]*$", replacement = "")
 
 # use the object name to create the output file name
-outfile <- paste0(obj_name, ".Rda")
+outfile <- paste0(obj_name, ".rda")
 
 # check to see if the output file already exists
 if (file.exists(outfile)){
