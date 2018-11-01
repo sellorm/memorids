@@ -4,7 +4,7 @@
 \alias{stats}
 \title{print some basic info about the words used in this package}
 \usage{
-stats()
+stats(num_runs = 100)
 }
 \description{
 print some basic info about the words used in this package
