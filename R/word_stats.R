@@ -2,12 +2,28 @@
 #'
 #' @keywords internal
 #'
-stats <- function(){
-  cat("Number of adjectives:", length(adjectives), "\n")
-  cat("Number of nouns:", length(nouns), "\n")
-  cat("Number of combinations:", memorids:::num_combinations(), "\n")
-  cat("Max length of adjective:", max(unlist(lapply(adjectives, nchar))), "\n")
-  cat("Max length of noun:", max(unlist(lapply(nouns, nchar))), "\n")
-  cat("Mean iterations before collision:",
-      memorids:::mean_time_before_collision(), "\n")
+stats <- function(num_runs = 100){
+  num_adjs <- length(adjectives)
+  num_nouns <- length(nouns)
+  num_combs <- memorids:::num_combinations()
+  max_len_adj <- max(unlist(lapply(adjectives, nchar)))
+  max_len_noun <- max(unlist(lapply(nouns, nchar)))
+  mtbc <- memorids:::mean_time_before_collision(num = num_runs)
+  results <- setNames(
+    list(num_adjs, num_nouns, num_combs, max_len_adj, max_len_noun, mtbc),
+    c("num_adjs", "num_nouns", "num_combs", "max_len_adj", "max_len_noun",
+      "mtbc")
+  )
+  structure(results, class = "memorids_info")
+}
+
+
+print.memorids_info <- function(x, ...){
+  cat("memorids info...\n")
+  cat("  Number of adjectives              :", x$num_adjs, "\n")
+  cat("  Number of nouns                   :", x$num_nouns, "\n")
+  cat("  Number of combinations            :", x$num_combs, "\n")
+  cat("  Max length of adjectives          :", x$max_len_adj, "\n")
+  cat("  Max length of nouns               :", x$max_len_noun, "\n")
+  cat("  Mean iterations before collision  :", x$mtbc, "\n")
 }
