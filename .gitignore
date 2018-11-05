@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 tests/README.md
+data-raw/*.rda
