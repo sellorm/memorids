@@ -545,6 +545,7 @@ equipment
 equivalent
 error
 escape
+escarpment
 essay
 establishment
 estate
@@ -911,7 +912,6 @@ mail
 main
 maintenance
 major
-make
 malamute
 mall
 maltese
@@ -1362,8 +1362,8 @@ sale
 salt
 sample
 sand
+sandal
 sandwich
-saola
 satisfaction
 save
 savings
@@ -1509,6 +1509,7 @@ square
 squid
 squirrel
 squirt
+sriracha
 stable
 staff
 stage
