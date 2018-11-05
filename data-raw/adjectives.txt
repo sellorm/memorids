@@ -1683,7 +1683,6 @@ azotic
 azure
 azygos
 azygous
-babelike
 baboonish
 babyish
 babylonian
@@ -1693,7 +1692,6 @@ bacchanalian
 bacchantic
 bacchic
 bacciferous
-baccivorous
 bacillar
 bacillary
 bacilliform
