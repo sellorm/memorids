@@ -38,3 +38,15 @@ You can also change the separator.
 > memorids::memorid(sep = " ")
 [1] "mysterious butterfly"
 ```
+
+
+## pre-commit hook
+
+The repo contains a handy pre-commit hook to prevent committing when either `data-raw/nouns.txt` or `data-raw/adjectives.txt` is newer than `R/sysdata.R`.
+
+To use it run the following in the main `memorid` directory:
+
+```
+ln -s ../../pre-commit.R .git/hooks/pre-commit
+```
+
