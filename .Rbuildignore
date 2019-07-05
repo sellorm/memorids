@@ -4,3 +4,4 @@
 docs
 data-raw
 Jenkinsfile
+Makefile
