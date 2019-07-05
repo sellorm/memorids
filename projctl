@@ -5,7 +5,7 @@ set -euo pipefail
 INPUT=${1:-empty}
 
 function prep(){ ## clears output directory if it exists
-  [ -d output ] || rm -r output
+  [ -d output ] && rm -r output
 }
 
 function version(){ ## Add the Jenkins $BUILD_NUMBER to the version
