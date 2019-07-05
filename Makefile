@@ -4,20 +4,19 @@ help: ## Display this help
 all: prep version data build archive ## Run the entire process (CI only)
 
 prep: ## makes the output directory
-	[ -d output ] && rm -r output
+	bash projctl prep
 
 version: ## updates the version with the build number
-	sed -i "/Version/ s/\$/.${BUILD_NUMBER}/" DESCRIPTION
+	bash projctl version
 
 data: ## create the data
-	cd data-raw && make
+	bash projctl data
 
 build: ## Build the package
-	R -e 'devtools::build(path = "/tmp/")'
+	bash projctl build
 
 archive: ## move the package outputs to the 'output' directory
-	[ -d output ] || mkdir output
-	mv /tmp/dailies_*.tar.gz ./output/
+	bash projctl archive
 
 clean:
 	-rm -r output

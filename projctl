@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+INPUT=${1:-empty}
+
+function prep(){ ## clears output directory if it exists
+  [ -d output ] || rm -r output
+}
+
+function version(){ ## Add the Jenkins $BUILD_NUMBER to the version
+	sed -i "/Version/ s/\$/.${BUILD_NUMBER}/" DESCRIPTION
+}
+
+function data(){ ## Create the data
+	cd data-raw && make
+}
+
+function build(){ ## Build the package
+	R -e 'devtools::build(path = "/tmp/")'
+}
+
+function archive(){ ## Move the package to the output directory
+	[ -d output ] || mkdir output
+	mv /tmp/memorids_*.tar.gz ./output/
+}
+
+
+function usage(){ ## prints the usage
+  echo "Usage: $(basename "$0") <prep|version|data|build|archive|all|help>"
+  echo
+  awk 'BEGIN {FS = "\\(\\){ ## "} /^[f].*?## / {printf "  \033[36m%-17s\033[0m %s\n", $1, $2}' projctl | sed 's/function//g'
+  echo
+  exit 1
+}
+
+case $INPUT in
+  prep)
+    prep
+    exit 0
+    ;;
+  version)
+    version
+    exit 0
+    ;;
+  data)
+    data
+    exit 0
+    ;;
+  build)
+    build
+    exit 0
+    ;;
+  archive)
+    archive
+    exit 0
+    ;;
+  all)
+    prep
+    version
+    data
+    build
+    archive
+    exit 0
+    ;;
+  help)
+    usage
+    ;;
+  empty)
+    usage
+    ;;
+esac

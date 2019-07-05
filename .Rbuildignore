@@ -5,3 +5,4 @@ docs
 data-raw
 Jenkinsfile
 Makefile
+projctl
