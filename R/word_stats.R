@@ -1,15 +1,15 @@
 #' print some basic info about the words used in this package
-#'
+#' @param num_runs the number of times to run the collision test
 #' @export
 #'
-stats <- function(num_runs = 100){
+memorids_stats <- function(num_runs = 100){
   num_adjs <- length(adjectives)
   num_nouns <- length(nouns)
-  num_combs <- memorids:::num_combinations()
+  num_combs <- num_combinations()
   max_len_adj <- max(unlist(lapply(adjectives, nchar)))
   max_len_noun <- max(unlist(lapply(nouns, nchar)))
-  mtbc <- memorids:::mean_time_before_collision(num = num_runs)
-  results <- setNames(
+  mtbc <- mean_time_before_collision(num = num_runs)
+  results <- stats::setNames(
     list(num_adjs, num_nouns, num_combs, max_len_adj, max_len_noun, mtbc),
     c("num_adjs", "num_nouns", "num_combs", "max_len_adj", "max_len_noun",
       "mtbc")

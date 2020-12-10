@@ -10,7 +10,7 @@ find_collision <- function(){
   iteration <- 1
   memorids_list <- ""
   while (TRUE) {
-    new_memorid <- memorids::memorid()
+    new_memorid <- memorid()
     if ( !new_memorid %in% memorids_list ) {
       memorids_list[[iteration]] <- new_memorid
     } else {
@@ -33,7 +33,7 @@ find_collision <- function(){
 mean_time_before_collision <- function(num = 100){
   collision_list <- list()
   while (num > 0){
-    collision_list[[num]] <- memorids:::find_collision()
+    collision_list[[num]] <- find_collision()
     num <- num - 1
   }
   round(mean(unlist(collision_list)))

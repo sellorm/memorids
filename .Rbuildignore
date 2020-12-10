@@ -7,3 +7,4 @@ Jenkinsfile
 Makefile
 projctl
 ^\.github$
+pre-commit.R

@@ -1,6 +1,6 @@
 context("word_stats - prep")
 
-memorids_info <- memorids:::stats(3)
+memorids_info <- memorids:::memorids_stats(3)
 
 
 context("word_stats - adjectives")
