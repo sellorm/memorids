@@ -1,6 +1,6 @@
 #' print some basic info about the words used in this package
 #'
-#' @keywords internal
+#' @export
 #'
 stats <- function(num_runs = 100){
   num_adjs <- length(adjectives)
@@ -17,7 +17,7 @@ stats <- function(num_runs = 100){
   structure(results, class = "memorids_info")
 }
 
-
+#' @export
 print.memorids_info <- function(x, ...){
   cat("memorids info...\n")
   cat("  Number of adjectives              :", x$num_adjs, "\n")
@@ -26,4 +26,5 @@ print.memorids_info <- function(x, ...){
   cat("  Max length of adjectives          :", x$max_len_adj, "\n")
   cat("  Max length of nouns               :", x$max_len_noun, "\n")
   cat("  Mean iterations before collision  :", x$mtbc, "\n")
+  invisible(x)
 }

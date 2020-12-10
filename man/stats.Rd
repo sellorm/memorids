@@ -9,4 +9,3 @@ stats(num_runs = 100)
 \description{
 print some basic info about the words used in this package
 }
-\keyword{internal}

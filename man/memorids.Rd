@@ -3,7 +3,6 @@
 \docType{package}
 \name{memorids}
 \alias{memorids}
-\alias{memorids-package}
 \title{memorids: A package for creating memorable IDs.}
 \description{
 Sometimes you just need an easy to remember ID. memorids aims to give you
