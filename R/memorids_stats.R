@@ -1,6 +1,5 @@
 #' print some basic info about the words used in this package
 #' @param num_runs the number of times to run the collision test
-#' @export
 #'
 memorids_stats <- function(num_runs = 100){
   num_adjs <- length(adjectives)

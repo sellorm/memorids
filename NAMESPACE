@@ -2,4 +2,3 @@
 
 S3method(print,memorids_info)
 export(memorid)
-export(memorids_stats)

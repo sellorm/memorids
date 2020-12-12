@@ -1149,7 +1149,6 @@ quote
 rabbit
 raccoon
 radio
-ragdoll
 rain
 raise
 range

@@ -8,3 +8,4 @@ Makefile
 projctl
 ^\.github$
 pre-commit.R
+^README\.Rmd$

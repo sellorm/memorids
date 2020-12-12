@@ -11,3 +11,10 @@ if ( file.mtime(nounfile) > file.mtime(sysdatafile) |
   file.mtime(adjfile) > file.mtime(sysdatafile) ){
   stop("Source files newer than target\n  Run 'make' in ./data-raw")
 }
+
+
+# Update README.md if required
+
+if ( file.mtime("README.Rmd") > file.mtime("README.md") ){
+  rmarkdown::render("README.Rmd")
+}
