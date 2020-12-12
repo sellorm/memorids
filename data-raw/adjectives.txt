@@ -1488,7 +1488,6 @@ atonic
 atoxic
 atrabilious
 atrial
-atrioventricular
 atrip
 atrocious
 atrophic
@@ -1540,7 +1539,6 @@ auric
 auricular
 auriculate
 auriculated
-auriculoventricular
 auriferous
 auriform
 auroral
@@ -1550,11 +1548,6 @@ auscultatory
 auspicious
 austenitic
 austere
-austral
-australasian
-australian
-australopithecine
-austrian
 austronesian
 autacoidal
 autarchic
@@ -5262,9 +5255,7 @@ electoral
 electric
 electrical
 electrifying
-electrocardiographic
 electrochemical
-electroencephalographic
 electrolytic
 electromagnetic
 electromechanical

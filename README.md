@@ -45,24 +45,24 @@ memorable ID.
 
 ``` r
 memorids::memorid()
-#> [1] "membranous-salad"
+#> [1] "memorable-salad"
 memorids::memorid()
-#> [1] "unapologetic-hall"
+#> [1] "unappetising-hall"
 memorids::memorid()
-#> [1] "nonresidential-rain"
+#> [1] "nonresistant-rain"
 ```
 
 You can also change the separator.
 
 ``` r
 memorids::memorid(sep = " ")
-#> [1] "subjugable cuttlefish"
+#> [1] "subliminal cuttlefish"
 ```
 
 ## Collisions
 
 Please remember that memorids aren’t unique IDs. There are a finite
-number of them – 28,484,460 to be precise – and as a consequence, you
+number of them – 28,473,120 to be precise – and as a consequence, you
 should not use them in situations where a unique ID is required without
 also checking for collisions.
 
@@ -73,12 +73,12 @@ memorid.
 ``` r
 memorids:::memorids_stats()
 #> memorids info...
-#>   Number of adjectives              : 17583 
+#>   Number of adjectives              : 17576 
 #>   Number of nouns                   : 1620 
-#>   Number of combinations            : 28484460 
+#>   Number of combinations            : 28473120 
 #>   Max length of adjectives          : 23 
 #>   Max length of nouns               : 21 
-#>   Mean iterations before collision  : 7044
+#>   Mean iterations before collision  : 7042
 ```
 
 ## pre-commit hook

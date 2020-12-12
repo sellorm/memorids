@@ -676,7 +676,6 @@ hour
 house
 housing
 hummingbird
-humuhumunukunukuapuaa
 hunt
 husky
 hyena

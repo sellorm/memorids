@@ -92,30 +92,30 @@
 <p>memorids offers a single function, <code><a href="reference/memorid.html">memorid()</a></code>, which returns a random memorable ID.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] "membranous-salad"</span>
+<span class="co">#&gt; [1] "memorable-salad"</span>
 <span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] "unapologetic-hall"</span>
+<span class="co">#&gt; [1] "unappetising-hall"</span>
 <span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; [1] "nonresidential-rain"</span></code></pre></div>
+<span class="co">#&gt; [1] "nonresistant-rain"</span></code></pre></div>
 <p>You can also change the separator.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span>sep <span class="op">=</span> <span class="st">" "</span><span class="op">)</span>
-<span class="co">#&gt; [1] "subjugable cuttlefish"</span></code></pre></div>
+<span class="co">#&gt; [1] "subliminal cuttlefish"</span></code></pre></div>
 </div>
 <div id="collisions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#collisions" class="anchor"></a>Collisions</h2>
-<p>Please remember that memorids aren’t unique IDs. There are a finite number of them – 28,484,460 to be precise – and as a consequence, you should not use them in situations where a unique ID is required without also checking for collisions.</p>
+<p>Please remember that memorids aren’t unique IDs. There are a finite number of them – 28,473,120 to be precise – and as a consequence, you should not use them in situations where a unique ID is required without also checking for collisions.</p>
 <p>The safest way to do this is to track what memorids you’re currently using and check against that list for a collision when issuing a new memorid.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">memorids</span><span class="fu">:::</span><span class="fu"><a href="reference/memorids_stats.html">memorids_stats</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; memorids info...</span>
-<span class="co">#&gt;   Number of adjectives              : 17583 </span>
+<span class="co">#&gt;   Number of adjectives              : 17576 </span>
 <span class="co">#&gt;   Number of nouns                   : 1620 </span>
-<span class="co">#&gt;   Number of combinations            : 28484460 </span>
+<span class="co">#&gt;   Number of combinations            : 28473120 </span>
 <span class="co">#&gt;   Max length of adjectives          : 23 </span>
 <span class="co">#&gt;   Max length of nouns               : 21 </span>
-<span class="co">#&gt;   Mean iterations before collision  : 7044</span></code></pre></div>
+<span class="co">#&gt;   Mean iterations before collision  : 7042</span></code></pre></div>
 </div>
 <div id="pre-commit-hook" class="section level2">
 <h2 class="hasAnchor">

@@ -18,7 +18,14 @@ build: ## Build the package
 archive: ## move the package outputs to the 'output' directory
 	bash projctl archive
 
+pkgdown: ## Build pkgdown site
+	R -e 'pkgdown::build_site()'
+
+readme: ## re-render the README file
+	R -e 'rmarkdown::render("README.Rmd")'
+
 clean:
 	-rm -r output
+	-rm README.html
 
-.PHONY: all prep version data build archive clean
+.PHONY: all prep version data build archive clean pkgdown readme
