@@ -9287,7 +9287,6 @@ melodramatic
 meltable
 melted
 melting
-membranous
 memorable
 menacing
 mendacious
@@ -10283,10 +10282,7 @@ nonreflecting
 nonreflective
 nonrenewable
 nonrepetitive
-nonrepresentational
-nonrepresentative
 nonresident
-nonresidential
 nonresilient
 nonresinous
 nonresiny
@@ -10357,8 +10353,6 @@ nonviolent
 nonviscid
 nonvisual
 nonvolatile
-nonvolatilisable
-nonvolatilizable
 nonvoluntary
 nonwashable
 nonwoody
@@ -14357,7 +14351,6 @@ subhuman
 subjacent
 subject
 subjective
-subjugable
 subjugated
 subjunctive
 sublimate
