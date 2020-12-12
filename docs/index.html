@@ -86,23 +86,43 @@
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>memorids offers a single function, <code><a href="reference/memorid.html">memorid()</a></code>, which returns the memorable ID.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span><span class="st"> </span>memorids<span class="op">::</span><span class="kw">memorid</span>()</span>
-<span id="cb2-2"><a href="#cb2-2"></a>[<span class="dv">1</span>] <span class="st">"ungroomed-professor"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="op">&gt;</span><span class="st"> </span>memorids<span class="op">::</span><span class="kw">memorid</span>()</span>
-<span id="cb2-4"><a href="#cb2-4"></a>[<span class="dv">1</span>] <span class="st">"reluctant-pipe"</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="op">&gt;</span><span class="st"> </span>memorids<span class="op">::</span><span class="kw">memorid</span>()</span>
-<span id="cb2-6"><a href="#cb2-6"></a>[<span class="dv">1</span>] <span class="st">"energetic-presentation"</span></span></code></pre></div>
+<p>Let’s set a seed first so the results are reproducible:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></code></pre></div>
+<p>memorids offers a single function, <code><a href="reference/memorid.html">memorid()</a></code>, which returns a random memorable ID.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; [1] "membranous-salad"</span>
+<span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; [1] "unapologetic-hall"</span>
+<span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; [1] "nonresidential-rain"</span></code></pre></div>
 <p>You can also change the separator.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;</span><span class="st"> </span>memorids<span class="op">::</span><span class="kw">memorid</span>(<span class="dt">sep =</span> <span class="st">" "</span>)</span>
-<span id="cb3-2"><a href="#cb3-2"></a>[<span class="dv">1</span>] <span class="st">"mysterious butterfly"</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">memorids</span><span class="fu">::</span><span class="fu"><a href="reference/memorid.html">memorid</a></span><span class="op">(</span>sep <span class="op">=</span> <span class="st">" "</span><span class="op">)</span>
+<span class="co">#&gt; [1] "subjugable cuttlefish"</span></code></pre></div>
+</div>
+<div id="collisions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#collisions" class="anchor"></a>Collisions</h2>
+<p>Please remember that memorids aren’t unique IDs. There are a finite number of them – 28,484,460 to be precise – and as a consequence, you should not use them in situations where a unique ID is required without also checking for collisions.</p>
+<p>The safest way to do this is to track what memorids you’re currently using and check against that list for a collision when issuing a new memorid.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">memorids</span><span class="fu">:::</span><span class="fu"><a href="reference/memorids_stats.html">memorids_stats</a></span><span class="op">(</span><span class="op">)</span>
+<span class="co">#&gt; memorids info...</span>
+<span class="co">#&gt;   Number of adjectives              : 17583 </span>
+<span class="co">#&gt;   Number of nouns                   : 1620 </span>
+<span class="co">#&gt;   Number of combinations            : 28484460 </span>
+<span class="co">#&gt;   Max length of adjectives          : 23 </span>
+<span class="co">#&gt;   Max length of nouns               : 21 </span>
+<span class="co">#&gt;   Mean iterations before collision  : 7044</span></code></pre></div>
 </div>
 <div id="pre-commit-hook" class="section level2">
 <h2 class="hasAnchor">
 <a href="#pre-commit-hook" class="anchor"></a>pre-commit hook</h2>
 <p>The repo contains a handy pre-commit hook to prevent committing when either <code>data-raw/nouns.txt</code> or <code>data-raw/adjectives.txt</code> is newer than <code>R/sysdata.R</code>.</p>
 <p>To use it run the following in the main <code>memorid</code> directory:</p>
-<pre><code>ln -s ../../pre-commit.R .git/hooks/pre-commit</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ln</span> -s ../../pre-commit.R .git/hooks/pre-commit</span></code></pre></div>
 </div>
 </div>
   </div>
